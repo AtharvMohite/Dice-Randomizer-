@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Randomizer</title>
+    <style>
+      img {
+        display: block;
+        margin-top: 6%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 17%;
+      }
+      .btn {
+        display: block;
+        border: none;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: yellow;
+        color: rgb(65, 214, 45);
+        width: 20%;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 70px;
+      }
+    </style>
+    <script>
+      function roll() {
+        setTimeout(function () {
+          var num = Math.floor(Math.random() * 6) + 1;
+          document
+            .getElementById("image")
+            .setAttribute("src", "/images/Dice" + num + ".png");
+        }, 2000);
+      }
+    </script>
+  </head>
+  <body>
+    <br /><br />
+    <button class="btn" onClick="roll()">Roll</button>
+    <img class="img" id="image" src="/images/Dice6.png" />
+  </body>
+</html>
